@@ -159,14 +159,14 @@ a[target="_blank"] {
 
 @font-face {
     font-family: 'hershey-noailles-oldfrench';
-    src: url('../assets/fonts/hershey-noailles-oldfrench.woff2') format('woff2');
+    src: 'hershey-noailles-unknown-2' format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'hershey-noailles-times-duplex';
-    src: url('../assets/fonts/hershey-noailles-times-duplex-italic.woff') format('woff');
+    src: 'hershey-noailles-unknown-2.woff' format('woff');
     font-weight: 400;
     font-style: italic;
 }
