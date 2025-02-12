@@ -1,0 +1,172 @@
+:root {
+    --article-m: 20px;
+    --content-width: 690px;
+    --h-spacing: 15px;
+    --g-main-font-size: 18px;
+    --g-main-line-height: 1.6em;
+}
+
+article {
+    /* font-family: 'hershey-noailles-oldfrench'; */
+    font-family: 'hershey-noailles-unknown';
+    font-size: var(--g-main-font-size);
+    line-height: var(--g-main-line-height);
+    letter-spacing: 0.0em;
+}
+
+article h1 {
+    margin-top: 20px;
+    margin-bottom: calc(var(--h-spacing));
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+    /* font-family:'hershey-noailles-unknown';
+    font-size:25px;
+    line-height:28px;
+    margin-top:var(--m);
+    margin-left:var(--m);
+    margin-bottom:calc(2 * var(--h-spacing)); */
+    padding-bottom: 15px;
+}
+
+article h1::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: var(--dashes);
+    overflow: hidden;
+    width: calc(100% + 1px);
+    height: 22px;
+    letter-spacing: 0px;
+    word-break: break-all;
+    font-size: var(--g-main-font-size);
+}
+
+article h3 {
+    font-family: 'hershey-noailles-unknown';
+    letter-spacing: 0.05em;
+    -webkit-text-stroke: 0.05em var(--fg);
+    margin-top: calc(2 * var(--h-spacing));
+}
+
+article h4 {
+    /* margin-top:calc(2 * var(--h-spacing)); */
+    /* font-size:var(--g-main-font-size);
+    line-height:var(--g-main-line-height); */
+    font-family: 'hershey-noailles-unknown';
+    /* -webkit-text-stroke: 0.03em  var(--fg); */
+    /* letter-spacing:0.01em; */
+}
+
+article p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+article p>img {
+    display: flex;
+}
+
+article code,
+article blockquote {
+    font-family: 'hershey-noailles-unknown';
+    font-size: 17px;
+    position: relative;
+    top: -2px;
+}
+
+article strong {
+    -webkit-text-stroke: 0.02em var(--fg);
+    /* font-weight:600; */
+    /* letter-spacing:1px; */
+}
+
+article ul li,
+.description ul li,
+article ol li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: calc(var(--h-spacing) / 2);
+}
+
+article blockquote {
+    box-sizing: border-box;
+    padding-left: calc(var(--h-spacing) * 2);
+    border-left: 1px solid rgba(var(--rgb-low-opacity), 0.2);
+}
+
+article blockquote>* {
+    margin-bottom: var(--h-spacing);
+}
+
+article ul li::before,
+.description ul li::before {
+    font-family: 'hershey-noailles-unknown';
+    content: '*';
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.5em;
+}
+
+article ol {
+    /* list-style:decimal; */
+    counter-reset: article-ordered-list;
+}
+
+article ol li {
+    counter-increment: article-ordered-list;
+}
+
+article ol li::before {
+    content: counter(article-ordered-list) ". ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* line-height: 0.9em; */
+}
+
+em {
+    font-style: italic;
+    /* font-family:'hershey-noailles-times-duplex'; */
+}
+
+mark {
+    background-color: transparent;
+}
+
+article mark {
+    background-color: var(--col-highlight);
+}
+
+a[target="_blank"] {
+    cursor: alias;
+}
+
+@media(max-width:500px) {
+    :root {
+        --g-main-font-size: 17px;
+    }
+    article code,
+    article blockquote {
+        font-size: 16px;
+    }
+    article h1 {
+        /* font-size:35px;
+        line-height:42px; */
+    }
+}
+
+@font-face {
+    font-family: 'hershey-noailles-oldfrench';
+    src: url('../assets/fonts/hershey-noailles-oldfrench.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hershey-noailles-times-duplex';
+    src: url('../assets/fonts/hershey-noailles-times-duplex-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
